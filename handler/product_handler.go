@@ -38,3 +38,8 @@ func (h *ProductHandler) Update(c *fiber.Ctx) error {
 		h.DB.UpdateProduct,
 	)
 }
+
+func (h *ProductHandler) Delete(c *fiber.Ctx) error {
+
+	return gocrud.NewDeleteAdminJSONHandler(c, &h.HandlerConfig, "Product", h.DB.DeleteProduct)
+}
