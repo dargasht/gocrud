@@ -4,6 +4,8 @@ type CReq[T CRepo] interface {
 	ToRepo() T
 }
 
-type CRepo interface{}
+type CRepo interface {
+}
 
-type CRes interface{}
+type CRes interface {
+}

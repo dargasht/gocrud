@@ -8,9 +8,12 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-type CreateFunc func(context.Context, CRepo) (CRes, error)
-
-func NewCreateAdminJSONHandler[T CReq[U], U CRepo](c *fiber.Ctx, h *HandlerConfig, source string, createFunc CreateFunc) error {
+func NewCreateAdminJSONHandler[T CReq[U], U CRepo, R CRes](
+	c *fiber.Ctx,
+	h *HandlerConfig,
+	source string,
+	createFunc func(context.Context, U) (R, error),
+) error {
 
 	if err := EnsureAdmin(source, h, c); err != nil {
 		return err

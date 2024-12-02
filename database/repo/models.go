@@ -8,6 +8,13 @@ import (
 	"time"
 )
 
+type Product struct {
+	ID        int32     `json:"id"`
+	Name      string    `json:"name"`
+	Price     int64     `json:"price"`
+	CreatedAt time.Time `json:"created_at"`
+}
+
 type User struct {
 	ID        int32     `json:"id"`
 	Name      string    `json:"name"`
