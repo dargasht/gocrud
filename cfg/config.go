@@ -7,5 +7,6 @@ import (
 )
 
 var (
-	PORT = os.Getenv("PORT")
+	PORT       = os.Getenv("PORT")
+	AUTHSECRET = os.Getenv("AUTHSECRET")
 )

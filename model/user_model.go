@@ -2,25 +2,25 @@ package model
 
 import "github.com/dargasht/gocrud/database/repo"
 
-type PersonCReq struct { //CReq stands for Create Request
+type UserCReq struct { //CReq stands for Create Request
 	Name  string `json:"name" validate:"required"`
 	Email string `json:"email" validate:"required,email"`
 }
 
-func (p PersonCReq) ToRepo() repo.CreatePersonParams {
-	return repo.CreatePersonParams(p)
+func (p UserCReq) ToRepo() repo.CreateUserParams {
+	return repo.CreateUserParams(p)
 }
 
-type PersonUReq struct { //UReq stands for Update Request
+type UserUReq struct { //UReq stands for Update Request
 	Name  string `json:"name" validate:"required"`
 	Email string `json:"email" validate:"required,email"`
 	ID    int32  `json:"-"` // "-" means this field is not required alway leave it like this
 }
 
-func (p PersonUReq) ToRepo() repo.UpdatePersonParams {
-	return repo.UpdatePersonParams(p)
+func (p UserUReq) ToRepo() repo.UpdateUserParams {
+	return repo.UpdateUserParams(p)
 }
-func (p PersonUReq) SetID(id int32) PersonUReq {
+func (p UserUReq) SetID(id int32) UserUReq {
 	p.ID = id
 	return p
 }
