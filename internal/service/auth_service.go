@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dargasht/gocrud/cfg"
+	"github.com/dargasht/gocrud/internal/cfg"
 	"github.com/gofiber/fiber/v2"
 	"github.com/golang-jwt/jwt/v5"
 )

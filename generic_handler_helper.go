@@ -1,8 +1,8 @@
 package gocrud
 
 import (
-	"github.com/dargasht/gocrud/database/repo"
-	"github.com/dargasht/gocrud/service"
+	"github.com/dargasht/gocrud/internal/database/repo"
+	"github.com/dargasht/gocrud/internal/service"
 	"github.com/gofiber/fiber/v2"
 	"github.com/golang-jwt/jwt/v5"
 	"go.uber.org/zap"

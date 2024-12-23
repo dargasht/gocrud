@@ -8,9 +8,9 @@ import (
 
 	"github.com/bytedance/sonic"
 	"github.com/dargasht/gocrud"
-	"github.com/dargasht/gocrud/cfg"
-	"github.com/dargasht/gocrud/database/repo"
-	"github.com/dargasht/gocrud/router"
+	"github.com/dargasht/gocrud/internal/cfg"
+	"github.com/dargasht/gocrud/internal/database/repo"
+	"github.com/dargasht/gocrud/internal/router"
 	"github.com/gofiber/fiber/v2"
 	"github.com/jackc/pgx/v5/pgxpool"
 	_ "go.uber.org/automaxprocs" // use this it is good

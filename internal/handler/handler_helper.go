@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/dargasht/gocrud/database/repo"
+	"github.com/dargasht/gocrud/internal/database/repo"
 	"go.uber.org/zap"
 )
 

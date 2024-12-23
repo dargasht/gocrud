@@ -1,6 +1,6 @@
 package model
 
-import "github.com/dargasht/gocrud/database/repo"
+import "github.com/dargasht/gocrud/internal/database/repo"
 
 type UserCReq struct { //CReq stands for Create Request
 	Name  string `json:"name" validate:"required"`

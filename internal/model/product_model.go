@@ -1,6 +1,6 @@
 package model
 
-import "github.com/dargasht/gocrud/database/repo"
+import "github.com/dargasht/gocrud/internal/database/repo"
 
 type ProductCReq struct {
 	Name  string `json:"name" validate:"required"`

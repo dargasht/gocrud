@@ -3,8 +3,8 @@ package gocrud
 import (
 	"context"
 
-	"github.com/dargasht/gocrud/helper"
-	"github.com/dargasht/gocrud/model"
+	"github.com/dargasht/gocrud/internal/helper"
+	"github.com/dargasht/gocrud/internal/model"
 	"github.com/gofiber/fiber/v2"
 )
 

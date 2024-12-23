@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/dargasht/gocrud"
-	"github.com/dargasht/gocrud/middleware"
+	"github.com/dargasht/gocrud/internal/middleware"
 	"github.com/gofiber/fiber/v2"
 )
 

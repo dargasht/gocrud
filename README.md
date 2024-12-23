@@ -34,3 +34,32 @@ go get github.com/lestrrat-go/gocrud
 - no ORM
 - writing raw sql queries
 - simplicity simplicity and simplicity
+
+## Folder structure
+
+```bash
+.
+├── bin # for binaries (should be added in gitignore)
+├── cfg # for configs
+├── cmd
+│   └── api
+│       └── main.go # the main entry point
+├── database
+│   ├── migration # for database migrations
+│   ├── query # for database queries
+│   ├── repo # for sqlc generated queries and models 
+│   └── store # for specific database implementations that uses sqlx
+├── handler # for http handlers (data transformation and validation)
+├── middleware # for http middlewares (if needed)
+├── model # for service models and handler models (DTOs)
+├── router # for instantiating handlers and injecting dependencies
+├── service # for business logic (if needed)
+└── utils # for utility functions 
+
+```
+
+Things to keep in mind:
+
+- services should be stateless and not depend on external services
+- use service layer if business logic is not simple otherwise use handler layer
+- go to each folder in the internal folder and read the README.md

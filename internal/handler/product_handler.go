@@ -2,8 +2,8 @@ package handler
 
 import (
 	"github.com/dargasht/gocrud"
-	"github.com/dargasht/gocrud/database/repo"
-	"github.com/dargasht/gocrud/model"
+	"github.com/dargasht/gocrud/internal/database/repo"
+	"github.com/dargasht/gocrud/internal/model"
 	"github.com/gofiber/fiber/v2"
 )
 
