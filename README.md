@@ -66,10 +66,14 @@ Things to keep in mind:
 
 Usefull stuff in this package are:
 
-- [error handler](https://github.com/dargasht/gocrud/blob/main/error_handler.go)
+- [Gocrud config](https://github.com/dargasht/gocrud/blob/main/config.go)
+  - [GoCRUDConfig](https://github.com/dargasht/gocrud/blob/main/config.go#L36): THIS IS VERY IMPORTANT, YOU SHOULD SET THIS TO YOUR NEEDS IN YOUR MAIN FILE 🔥🔥🔥🔥🔥
 
-- [error helper stuff](https://github.com/dargasht/gocrud/blob/main/error_helper.go)
-  - This contains stuff usefull to use in your handlers, they are (Just read comments in code):
+  - [SetConfig](https://github.com/dargasht/gocrud/blob/main/config.go#L22)
+
+- [Error handler](https://github.com/dargasht/gocrud/blob/main/error_handler.go)
+
+- [Error helper stuff](https://github.com/dargasht/gocrud/blob/main/error_helper.go): Just read comments in code
   - [Standard error type we use](https://github.com/dargasht/gocrud/blob/main/error_helper.go#L32)
   - [some functions for creating errors](https://github.com/dargasht/gocrud/blob/main/error_helper.go#L45)
   - [NewNotFoundError](https://github.com/dargasht/gocrud/blob/main/error_helper.go#L58)
@@ -77,8 +81,7 @@ Usefull stuff in this package are:
   - [JSON and Validation Errors](https://github.com/dargasht/gocrud/blob/main/error_helper.go#L139)
   - [Token and permission errors](https://github.com/dargasht/gocrud/blob/main/error_helper.go#L162)
 
-- [handler helper stuff](https://github.com/dargasht/gocrud/blob/main/handler_helper.go)
-  - This contains stuff usefull to use in your handlers, they are (Just read comments in code):
+- [handler helper stuff](https://github.com/dargasht/gocrud/blob/main/handler_helper.go): This contains stuff usefull to use in your handlers, they are (Just read comments in code)
   - [Handler config example](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L13)
   - [Standard responses](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L32)
   - [3 functions for pagination](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L78)
@@ -86,3 +89,8 @@ Usefull stuff in this package are:
   - [Authenticate function](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L161)
   - [GetUserIDFromJWT function](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L190)
   - [EnsureAdmin function](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L145)
+
+- [jwt helper stuff](https://github.com/dargasht/gocrud/blob/main/jwt_helper.go): Just read comments in code
+  - [GenerateToken](https://github.com/dargasht/gocrud/blob/main/jwt_helper.go#L14)
+  - [GenerateToken](https://github.com/dargasht/gocrud/blob/main/jwt_helper.go#L28)
+  - [GenerateToken](https://github.com/dargasht/gocrud/blob/main/jwt_helper.go#L40)

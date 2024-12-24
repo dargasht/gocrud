@@ -20,6 +20,14 @@ import (
 func main() {
 
 	//---------------------------------------------------------------
+	// setup gocrud config
+
+	gocrud.GoCRUDConfig = gocrud.SetConfig(
+		gocrud.WithAuthSecret(cfg.AUTHSECRET),
+		gocrud.WithLanguage("fa"),
+	)
+
+	//---------------------------------------------------------------
 	//Setup logger
 
 	logger, _ := zap.NewProduction()
