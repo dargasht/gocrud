@@ -67,3 +67,11 @@ Things to keep in mind:
 Usefull stuff in this package are:
 
 - [handler helper stuff](https://github.com/dargasht/gocrud/blob/main/handler_helper.go)
+  - This contains stuff usefull to use in your handlers, they are (Just read comments in code):
+  - [Handler config example](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L13)
+  - [Standard responses](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L32)
+  - [3 functions for pagination](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L78)
+  - [EnsureAdmin function](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L145)
+  - [Authenticate function](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L161)
+  - [GetUserIDFromJWT function](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L190)
+  - [EnsureAdmin function](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L145)
