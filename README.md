@@ -67,9 +67,9 @@ Things to keep in mind:
 Usefull stuff in this package are:
 
 - [Gocrud config](https://github.com/dargasht/gocrud/blob/main/config.go)
-  - [GoCRUDConfig](https://github.com/dargasht/gocrud/blob/main/config.go#L36): THIS IS VERY IMPORTANT, YOU SHOULD SET THIS TO YOUR NEEDS IN YOUR MAIN FILE 🔥🔥🔥🔥🔥
+  - [GoCRUDConfig](https://github.com/dargasht/gocrud/blob/main/config.go#L37): THIS IS VERY IMPORTANT, YOU SHOULD SET THIS TO YOUR NEEDS IN YOUR MAIN FILE 🔥🔥🔥🔥🔥
 
-  - [SetConfig](https://github.com/dargasht/gocrud/blob/main/config.go#L22)
+  - [SetConfig](https://github.com/dargasht/gocrud/blob/main/config.go#L21)
 
 - [Error handler](https://github.com/dargasht/gocrud/blob/main/error_handler.go)
 
@@ -94,3 +94,13 @@ Usefull stuff in this package are:
   - [GenerateToken](https://github.com/dargasht/gocrud/blob/main/jwt_helper.go#L14)
   - [GenerateToken](https://github.com/dargasht/gocrud/blob/main/jwt_helper.go#L28)
   - [GenerateToken](https://github.com/dargasht/gocrud/blob/main/jwt_helper.go#L40)
+
+- [kavenegar helper stuff](https://github.com/dargasht/gocrud/blob/main/kavenegar_helper.go): 2 functions
+  - [SendOTP](https://github.com/dargasht/gocrud/blob/main/kavenegar_helper.go#L54): For sending otp
+  - [ValidateOTP](https://github.com/dargasht/gocrud/blob/main/kavenegar_helper.go#L91): For validating otp
+  - Seems simple enough 🤷‍♂️🤷‍ not much to explain
+
+- [S3 helpers](https://github.com/dargasht/gocrud/blob/main/s3_helper.go): 2 functions
+  - [SetupS3Client](https://github.com/dargasht/gocrud/blob/main/s3_helper.go#L17): For setting up the
+s3 client, you should call this in the main file and set it to gocrud.GoCRUDConfig Object
+  - [UploadFormFileToS3](https://github.com/dargasht/gocrud/blob/main/s3_helper.go#L38): For uploading files to s3

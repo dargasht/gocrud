@@ -23,8 +23,14 @@ func main() {
 	// setup gocrud config
 
 	gocrud.GoCRUDConfig = gocrud.SetConfig(
+		gocrud.WithAppName("some random name"),
 		gocrud.WithAuthSecret(cfg.AUTHSECRET),
 		gocrud.WithLanguage("fa"),
+		gocrud.WithOtpApiKey("your_otp_api_key"),
+		gocrud.WithS3Client(gocrud.SetupS3Client(
+			"S3_ACCESS_KEY",
+			"S3_SECRET_KEY",
+			"S3_ENDPOINT"), "bucket_name"),
 	)
 
 	//---------------------------------------------------------------
