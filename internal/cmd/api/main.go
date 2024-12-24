@@ -51,7 +51,7 @@ func main() {
 	//---------------------------------------------------------------
 	// Setup app and router
 	app := fiber.New(fiber.Config{
-		ErrorHandler: gocrud.CustomErrorHandler(logger),
+		ErrorHandler: gocrud.CRUDErrorHandler(logger),
 		AppName:      "Some CRUD App",
 		JSONEncoder:  sonic.Marshal,
 		JSONDecoder:  sonic.Unmarshal,

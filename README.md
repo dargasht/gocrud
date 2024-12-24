@@ -66,6 +66,17 @@ Things to keep in mind:
 
 Usefull stuff in this package are:
 
+- [error handler](https://github.com/dargasht/gocrud/blob/main/error_handler.go)
+
+- [error helper stuff](https://github.com/dargasht/gocrud/blob/main/error_helper.go)
+  - This contains stuff usefull to use in your handlers, they are (Just read comments in code):
+  - [Standard error type we use](https://github.com/dargasht/gocrud/blob/main/error_helper.go#L32)
+  - [some functions for creating errors](https://github.com/dargasht/gocrud/blob/main/error_helper.go#L45)
+  - [NewNotFoundError](https://github.com/dargasht/gocrud/blob/main/error_helper.go#L58)
+  - [Database Errors](https://github.com/dargasht/gocrud/blob/main/error_helper.go#L69)
+  - [JSON and Validation Errors](https://github.com/dargasht/gocrud/blob/main/error_helper.go#L139)
+  - [Token and permission errors](https://github.com/dargasht/gocrud/blob/main/error_helper.go#L162)
+
 - [handler helper stuff](https://github.com/dargasht/gocrud/blob/main/handler_helper.go)
   - This contains stuff usefull to use in your handlers, they are (Just read comments in code):
   - [Handler config example](https://github.com/dargasht/gocrud/blob/main/handler_helper.go#L13)

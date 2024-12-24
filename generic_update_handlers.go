@@ -21,25 +21,25 @@ func NewUpdateAdminJSONHandler[T UReq[U], U URepo](
 
 	var req T
 	if err := c.BodyParser(&req); err != nil {
-		return NewJsonError(source+" JSON Parse Error", err.Error())
+		return NewJSONError(source+" JSON Parse Error", err)
 	}
 	if err := model.Validate.Struct(&req); err != nil {
-		return NewValidationError(source+" Validation Error", err.Error())
+		return NewValidationError(source+" Validation Error", err)
 	}
 
 	id, _ := c.ParamsInt("id")
 	a, ok := req.SetID(int32(id)).(T)
 	if !ok {
-		return NewNotFoundError(source+" Not Found", "not found")
+		return NewNotFoundError(source+" Not Found", ErrNotFound)
 	}
 
 	rowsAffected, err := updateFunc(c.Context(), a.ToRepo())
 	if err != nil {
-		return NewUpdateError(source+" Update Error", err.Error())
+		return NewUpdateError(source+" Update Error", err)
 	}
 
 	if rowsAffected == 0 {
-		return NewNotFoundError(source+" Not Found", "not found")
+		return NewNotFoundError(source+" Not Found", ErrNotFound)
 	}
 
 	return c.Status(fiber.StatusCreated).JSON(NewRes([]int{}, helper.Success, fiber.StatusCreated))

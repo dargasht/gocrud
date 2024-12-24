@@ -22,11 +22,11 @@ func NewDeleteAdminJSONHandler(
 
 	rowsAffected, err := updateFunc(c.Context(), int32(id))
 	if err != nil {
-		return NewUpdateError(source+" Update Error", err.Error())
+		return NewUpdateError(source+" Update Error", err)
 	}
 
 	if rowsAffected == 0 {
-		return NewNotFoundError(source+" Not Found", "not found")
+		return NewNotFoundError(source+" Not Found", ErrNotFound)
 	}
 
 	return c.Status(fiber.StatusCreated).JSON(NewRes([]int{}, helper.Success, fiber.StatusCreated))
