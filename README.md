@@ -63,3 +63,7 @@ Things to keep in mind:
 - services should be stateless and not depend on external services
 - use service layer if business logic is not simple otherwise use handler layer
 - go to each folder in the internal folder and read the README.md
+
+Usefull stuff in this package are:
+
+- [handler helper stuff](https://github.com/dargasht/gocrud/blob/main/handler_helper.go)
