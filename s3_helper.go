@@ -34,8 +34,8 @@ func SetupS3Client(accessKey, secretKey, endpoint string) *s3.Client {
 	return s3.NewFromConfig(config)
 }
 
-// UploadFormFileToS3 uploads a file to S3
-func UploadFormFileToS3(
+// UploadToS3 uploads a file to S3
+func UploadToS3(
 	ctx context.Context,
 	client *s3.Client,
 	file multipart.File,

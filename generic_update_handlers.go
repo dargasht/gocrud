@@ -3,7 +3,6 @@ package gocrud
 import (
 	"context"
 
-	"github.com/dargasht/gocrud/internal/helper"
 	"github.com/dargasht/gocrud/internal/model"
 	"github.com/gofiber/fiber/v2"
 )
@@ -42,5 +41,5 @@ func NewUpdateAdminJSONHandler[T UReq[U], U URepo](
 		return NewNotFoundError(source+" Not Found", ErrNotFound)
 	}
 
-	return c.Status(fiber.StatusCreated).JSON(NewRes([]int{}, helper.Success, fiber.StatusCreated))
+	return c.Status(fiber.StatusCreated).JSON(NewRes([]int{}, Success, fiber.StatusCreated))
 }

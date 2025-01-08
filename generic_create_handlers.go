@@ -3,7 +3,6 @@ package gocrud
 import (
 	"context"
 
-	"github.com/dargasht/gocrud/internal/helper"
 	"github.com/dargasht/gocrud/internal/model"
 	"github.com/gofiber/fiber/v2"
 )
@@ -33,6 +32,6 @@ func NewCreateAdminJSONHandler[T CReq[U], U CRepo, R CRes](
 		return NewCreateError(source+" Database Error", err)
 	}
 
-	return c.Status(fiber.StatusCreated).JSON(NewRes(res, helper.Success, fiber.StatusCreated))
+	return c.Status(fiber.StatusCreated).JSON(NewRes(res, Success, fiber.StatusCreated))
 
 }

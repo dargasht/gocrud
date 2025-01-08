@@ -3,7 +3,6 @@ package gocrud
 import (
 	"context"
 
-	"github.com/dargasht/gocrud/internal/helper"
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -29,5 +28,5 @@ func NewDeleteAdminJSONHandler(
 		return NewNotFoundError(source+" Not Found", ErrNotFound)
 	}
 
-	return c.Status(fiber.StatusCreated).JSON(NewRes([]int{}, helper.Success, fiber.StatusCreated))
+	return c.Status(fiber.StatusCreated).JSON(NewRes([]int{}, Success, fiber.StatusCreated))
 }
