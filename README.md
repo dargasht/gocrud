@@ -5,7 +5,7 @@ Template for go crud applications we use. Also some generic handler functions an
 ## Installation
 
 ```bash
-go get github.com/lestrrat-go/gocrud
+go get github.com/dargasht/gocrud
 ```
 
 ## What we use
